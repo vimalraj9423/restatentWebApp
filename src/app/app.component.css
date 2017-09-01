@@ -4,3 +4,69 @@
 .navbar-inverse .navbar-brand {
     color: #ddc5c5;
 }
+.input-class {
+    width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+    float: right;
+}
+.search{
+    margin: 0 auto;
+    width: 50%;
+}
+.city-select{
+
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 4px solid;
+    border-radius: 4px;
+    margin-right: 20px;
+    float: left;
+}
+@media only screen and (max-width: 1040px) {
+    .input-class {
+        width: 56%;
+    }
+    
+}
+@media only screen and (max-width: 1227px){
+    .search{
+        width: 62%;
+    }
+}
+@media only screen and (max-width: 834px){
+    .search{
+        width: 64%;
+    }
+}
+@media only screen and (max-width: 811px){
+    .search{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 766px){
+    .search{
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 705px){
+    .search{
+        width: 82%;
+    }
+}
+@media only screen and (max-width: 639px){
+  
+    .city-select{
+        float: none;
+        width:100%;
+    }
+    .input-class{
+        float: none;
+        width: 100%;
+    }
+}
