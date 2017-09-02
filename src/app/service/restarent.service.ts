@@ -7,7 +7,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class RestarentService {
-  baseUrl="http://ec2-52-10-202-93.us-west-2.compute.amazonaws.com:3000"
+  baseUrl="https://restarent-api.herokuapp.com"
   constructor(private http:Http) { }
 
   getRestarentByFilter(city,restarent_name): Observable <any>{
