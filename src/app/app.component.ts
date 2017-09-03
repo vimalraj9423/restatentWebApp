@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-
+import { Router} from '@angular/router';
 import { RestarentService} from './service/restarent.service';
 @Component({
   selector: 'app-root',
@@ -12,12 +12,17 @@ export class AppComponent implements OnInit{
   restarent="";
   cities:Array<string>=[];
   restarents:Array<any>=[]
-  constructor(private restarentService:RestarentService){
+  constructor(private restarentService:RestarentService,private router:Router){
   
 
   }
   ngOnInit() {
-      this.getCity(()=>{})
+      this.getCity(()=>{
+        this.restarentService.getRestarentByFilter("",this.restarent).subscribe(response=>{
+          console.log(response)
+          this.restarents=response;
+        })
+      })
   }
   getCity(callBack){
     this.restarentService.getCity().subscribe(Response=>{
@@ -38,5 +43,9 @@ export class AppComponent implements OnInit{
         this.restarents=response;
       })
     }
+  }
+  openRestarent(id){
+    console.log(id)
+    this.router.navigate(["/"+id])
   }
 }

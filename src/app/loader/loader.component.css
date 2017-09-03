@@ -1,26 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>RestatentWebApp</title>
-  <base href="/">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.ckeditor.com/4.5.11/full/ckeditor.js"></script>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-main>
-    <div class="modal fade in" id="myModal" role="dialog" style="display: block; padding-left: 17px;">   
-      <!-- Modal content-->
-       <div [ngClass]="{takefullplace:loader}" style="text-align:center">
-          <div class="loader"></div>
-      </div>
-  </div>
-    <style>
-        .takefullplace{
+    .takefullplace{
             position: absolute;
             height: 99%;
             top: 0px;
@@ -53,13 +31,3 @@
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
-    </style>
-  </app-main>
-  <style>
-  body{
-       background: #8aa9b9;
-
-}
-  </style>
-</body>
-</html>

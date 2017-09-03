@@ -1,4 +1,36 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>RestatentWebApp</title><base href="/"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head><body><app-main></app-main><style>body{
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>RestatentWebApp</title><base href="/"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><script src="https://cdn.ckeditor.com/4.5.11/full/ckeditor.js"></script><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head><body><app-main><div class="modal fade in" id="myModal" role="dialog" style="display: block; padding-left: 17px"><!-- Modal content--><div [ngClass]="{takefullplace:loader}" style="text-align:center"><div class="loader"></div></div></div><style>.takefullplace{
+            position: absolute;
+            height: 99%;
+            top: 0px;
+            left: 0px;
+            width: 99%;
+            background: rgba(240, 248, 255, 0.28)
+        }
+        .loader {
+            margin: auto;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            position: absolute;
+          border: 5px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 5px solid #3498db;
+          width: 50px;
+          height: 50px;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }</style></app-main><style>body{
        background: #8aa9b9;
 
-}</style><script type="text/javascript" src="inline.bb916a5365e8d4eb5b5c.bundle.js"></script><script type="text/javascript" src="polyfills.c9b879328f3396b2bbe8.bundle.js"></script><script type="text/javascript" src="vendor.5e7ef05fd5c7d3663797.bundle.js"></script><script type="text/javascript" src="main.f5a1a80815a822be6f93.bundle.js"></script></body></html>
+}</style><script type="text/javascript" src="inline.5ea87bcbb7c061fb3cc6.bundle.js"></script><script type="text/javascript" src="polyfills.c9b879328f3396b2bbe8.bundle.js"></script><script type="text/javascript" src="vendor.e02dc2843377218700eb.bundle.js"></script><script type="text/javascript" src="main.6d1313991d70078c45f2.bundle.js"></script></body></html>

@@ -7,7 +7,7 @@ body
   position: absolute;
   left: 50%;
   display: block;
-  margin: 100px -200px;
+  margin: -4px -200px;
   width: 400px;
   height: 60px;
   border: 1px solid #8a1;
@@ -43,4 +43,34 @@ body
   border-left: 20px solid #791;
   border-right: 30px solid transparent;
   transform: rotate(5deg);
+}
+.image-logo{
+    width: 29%; 
+    position: absolute;
+    left: 50%;
+    display: block;
+    margin:64px -105px;
+    width: 400px;
+    height: 60px;
+}
+@media (min-width: 1200px){
+ul.nav.nav-tabs {
+    /* margin: 127.1px -100px; */
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+}
+}
+.reiview-name{
+      color: #ff8b00;
+    font-size: large;
+    font-weight: bold;
+}
+.comment-class{
+  font-size: x-large;
+    margin-top: 136px;
+    padding-left: 24px;
+    /* padding-bottom: 34px; */
+    margin-bottom: 19px;
+    border-radius: 7px;
+    border: 6px solid;
 }

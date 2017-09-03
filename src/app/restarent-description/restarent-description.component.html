@@ -1,1 +1,40 @@
-<h1 class="banner">A Simple CSS Banner</h1>
+<div *ngIf="responseData" class="image-logo"><img style="    width: 200px;height: 200px;border-radius: 119px;" src="https://qph.ec.quoracdn.net/main-qimg-efc7d5be8b9abab0ac6dc39dbab0b4f1"></div>
+<h1 class="banner">{{responseData.restarent_name}}</h1>
+<div style="margin-top: 310px;">
+  <div class="container"> 
+    <div class="container" *ngIf="responseData"> 
+      <div class="container" style="    background: #dee6de;
+    min-height: 400px;
+    border-radius: 13px;"> 
+      <tabset #staticTabs >
+        <tab heading="Over view" style="    background:rgba(0, 0, 0, 0.32);color: whitesmoke;">Static content</tab>
+        <tab heading="reiviews" style="    background:rgba(0, 0, 0, 0.32);
+;color: whitesmoke;">
+          <div *ngIf="responseData" >
+          <div style="padding-left: 39px;padding-top: 21px;" *ngFor="let review of responseData.reviews">
+            <div><span class="reiview-name">{{review.name}}</span></div>
+            <div style="padding-left: 77px;" [innerHTML]="review.review"></div>
+
+          </div>
+          </div>
+          <div class="comment-class">
+            <div>Name:<input [(ngModel)]="name"></div>
+            <div style="    margin-top: 22px;padding-right:40%">
+                <ckeditor
+                      [(ngModel)]="newReview" #editor>
+                      
+                    </ckeditor>
+            </div>
+            <button (click)="updateReview()" style="    background: #ff8b00;
+    border: 0px;
+    margin-top: 5px;
+    border-radius: 11px;"> submit</button>
+          </div>
+        </tab>
+        <tab heading="Static Title 2">Static content 2</tab>
+      </tabset>
+
+    </div>
+  </div>
+</div>
+<app-loader *ngIf="!responseData"></app-loader>
