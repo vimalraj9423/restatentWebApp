@@ -58,6 +58,8 @@ public newReview
   getRestarentApi(){
     this.RestarentService.getRestarentDetails(this.restarent_id).subscribe(response=>{
       console.log(response)
+      response[0].time=JSON.parse(response[0].time)
+       response[0].product_list=JSON.parse(response[0].product_list)
       this.responseData=response[0];
     })
   }

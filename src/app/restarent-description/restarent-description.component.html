@@ -1,5 +1,5 @@
 <div *ngIf="responseData" class="image-logo"><img style="    width: 200px;height: 200px;border-radius: 119px;" src="https://qph.ec.quoracdn.net/main-qimg-efc7d5be8b9abab0ac6dc39dbab0b4f1"></div>
-<h1 class="banner">{{responseData.restarent_name}}</h1>
+<h1 class="banner">{{responseData?.restarent_name}}</h1>
 <div style="margin-top: 310px;">
   <div class="container"> 
     <div class="container" *ngIf="responseData"> 
@@ -7,7 +7,39 @@
     min-height: 400px;
     border-radius: 13px;"> 
       <tabset #staticTabs >
-        <tab heading="Over view" style="    background:rgba(0, 0, 0, 0.32);color: whitesmoke;">Static content</tab>
+        <tab heading="Over view" style="    background:rgba(0, 0, 0, 0.32);color: whitesmoke;">
+            <div style="margin-bottom: 25px" *ngIf="responseData">
+                  <div class="personal-detail-input-fields">
+                      <div class="personal-detail-input"> <label for="name">restarent_name</label></div>
+                     <div class="personal-detail-input">{{responseData.restarent_name}} </div>
+                  </div>
+                   <div class="personal-detail-input-fields">
+                      <div class="personal-detail-input"> <label for="name">payment_acceptable</label></div>
+                     <div class="personal-detail-input">{{responseData.payment_acceptable}} </div>
+                  </div>
+                   <div class="personal-detail-input-fields">
+                      <div class="personal-detail-input"> <label for="name">phone_no</label></div>
+                     <div class="personal-detail-input">{{responseData.phone_no}} </div>
+                  </div>
+                   <div class="personal-detail-input-fields">
+                      <div class="personal-detail-input"> <label for="name">city</label></div>
+                     <div class="personal-detail-input">{{responseData.city}} </div>
+                  </div>
+
+                   <div class="personal-detail-input-fields">
+                      <div class="personal-detail-input"> <label for="name">address</label></div>
+                     <div class="personal-detail-input">{{responseData.address}} </div>
+                  </div>
+                   <div class="personal-detail-input-fields">
+                      <div class="personal-detail-input"> <label for="name">average_cash</label></div>
+                     <div class="personal-detail-input">{{responseData.average_cash}} </div>
+                  </div>
+                  <div class="personal-detail-input-fields">
+                      <div class="personal-detail-input"> <label for="name">Timing </label></div>
+                     <div class="personal-detail-input">{{responseData.time.start+"-"+ responseData.time.end}} </div>
+                  </div>
+            </div>
+        </tab>
         <tab heading="reiviews" style="    background:rgba(0, 0, 0, 0.32);
 ;color: whitesmoke;">
           <div *ngIf="responseData" >
@@ -31,7 +63,18 @@
     border-radius: 11px;"> submit</button>
           </div>
         </tab>
-        <tab heading="Static Title 2">Static content 2</tab>
+        <tab heading="Menus" style="    background:rgba(0, 0, 0, 0.32);color: whitesmoke;">
+          <div style="margin-bottom: 25px" *ngIf="responseData">
+                  <div class="personal-detail-input-fields">
+                      <div class="personal-detail-input"> <label for="name">name</label></div>
+                     <div class="personal-detail-input">Cash </div>
+                  </div>
+                  <div class="personal-detail-input-fields" *ngFor="let product of responseData.product_list">
+                      <div class="personal-detail-input"> <label for="name">{{product.name}}</label></div>
+                     <div class="personal-detail-input">{{product.cash}} </div>
+                  </div>
+          </div>
+          </tab>
       </tabset>
 
     </div>
